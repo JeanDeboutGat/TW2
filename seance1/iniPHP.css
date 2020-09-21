@@ -1,0 +1,33 @@
+* {
+	font-family : sans-serif;
+}
+
+header hi, header h2 {
+	text-align: center;
+}
+section {
+	border : solid 2pt darkgrey;
+	margin : 50 px;
+	padding : 3pt;
+	background-color : lightyellow;
+}
+
+span.nom {
+	color : darkred;
+	font-weight : bold;
+}
+section h2 {
+	font-size : 13pt;
+	color : white;
+	background-color : darkred;
+	width : 35%;
+	border-radius : 7pt;
+	
+  margin : 0%;
+  margin-bottom : 10 pt;
+  text-align : right;
+  padding : 3pt;
+}
+  
+	
+	

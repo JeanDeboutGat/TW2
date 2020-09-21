@@ -1,0 +1,189 @@
+﻿==========================
+Auteur : DEROISSART Maxime
+==========================
+
+-------------------------------------------------
+Ici se trouvent les réponses au TP de la séance 6
+-------------------------------------------------
+
+============
+Question 1.1
+============
+
+a- select dossard, nom from coureurs
+
+b- select dossard, nom from coureurs order by dossard
+
+c- select dossard, nom from coureurs order by equipe, nom
+
+d- select dossard, nom, taille from coureurs reverse order by taille desc
+
+e- select nom, dossard from coureurs where equipe = 'LavePlusBlanc'
+e- select nom, dossard from coureurs where equipe = "LavePlusBlanc"
+
+Erreur SQL :
+
+ERREUR:  la colonne « LavePlusBlanc » n'existe pas
+LINE 1: ...(select nom, dossard from coureurs where equipe = "LavePlusB...
+                                                             ^
+
+Dans l'instruction :
+SELECT COUNT(*) AS total FROM (select nom, dossard from coureurs where equipe = "LavePlusBlanc") AS sub
+
+f- select coureurs.nom, coureurs."dossard" from coureurs where equipe = 'LavePlusBlanc'
+
+g- select coureurs.nom, taille, coureurs."equipe" from coureurs where taille<180
+
+h- select coureurs.nom, taille, coureurs."equipe" from coureurs where taille<180 order by taille asc
+
+i- select equipes.couleur from equipes
+
+============
+Question 1.2
+============
+
+a- select nom || ' appartient à l équipe ' || equipe from coureurs
+
+b- select (nom || ' appartient à l équipe ' || equipe) as appartenance from coureurs 
+
+c- select (upper(nom)) as "nom maj", (char_length(nom)) as "lg" from coureurs
+
+d- select upper(nom), char_length(nom) from coureurs order by char_length(nom)
+d- select upper(nom) as maj, char_length(nom) as lg from coureurs order by char_length(nom)
+
+e- select dossard, (upper(substring(nom,1,1)) || substring(nom, 2)) as Nom, (upper(substring(equipe,1,3)) || substring(equipe,4)) as equipe from coureurs
+
+============
+Question 1.3
+============
+
+a- select nom from coureurs where nom LIKE 'a%'
+
+a-select nom from coureurs
+group by nom having nom LIKE 'a%'
+
+b- select nom from coureurs where nom LIKE '%er%'
+
+b- select nom from coureurs
+group by nom having nom LIKE '%er%'
+
+c- select nom from coureurs where nom LIKE '_____'
+
+c- select nom from coureurs
+group by nom having nom LIKE '_____'
+
+d- select nom from coureurs where nom LIKE 'a__'
+
+d- select nom from coureurs
+group by nom having nom LIKE 'a__'
+
+e- select nom from coureurs where nom LIKE 'a__%'
+
+e- select nom from coureurs
+group by nom having nom LIKE 'a__%'
+
+============
+Question 1.4
+============
+
+a- Le résultat est la division euclidienne de deux entiers, et résultat renvoyé est donc un entier, arrondi à l'inférieur, donc ici 1.
+
+b- Le résultat est cette fois-ci un flottant. Cependant, il n'y a aucune limitation sur le nombre de chiffre après la virgule.
+
+c- select cast (taille as float)/100 from coureurs
+
+============
+Question 1.5
+============
+
+a- select * from coureurs, equipes
+
+b- select * from coureurs, equipes where equipes.nom = coureurs.equipe
+
+c- select dossard, coureurs.nom, equipe, couleur from coureurs, equipes  where equipes.nom = coureurs.equipe
+
+d- select coureurs.nom, directeur from coureurs, equipes where equipes.nom = coureurs.equipe
+
+e- select coureurs.nom, dossard, directeur from coureurs, equipes where equipes.nom = coureurs.equipe and directeur = 'Ralph'
+
+f- select equipes.directeur from coureurs, equipes where coureurs.nom = 'alphonse' and equipes.nom = coureurs.equipe
+
+
+============
+Question 1.6
+============
+
+a- insert into equipes (nom,couleur,directeur) values ('Nouvelle Équipe', 'orange', 'Archibald');
+
+b- insert into coureurs (nom,dossard,equipe,taille) values ('Prince2laForet','10','Nouvelle     Équipe','182');
+
+   insert into coureurs values ('1010','Sirene2laForet','Nouvelle Équipe','179')
+
+
+============
+Question 1.7
+============
+
+a- select * from equipes where directeur is null
+
+b- select * from equipes where directeur is not null
+
+============
+Question 1.8
+============
+
+a- UPDATE coureurs
+SET taille = taille - 1
+WHERE equipe = 'PicsouBank'
+
+b- UPDATE equipes
+SET directeur = 'Archibald'
+WHERE directeur is null
+
+============
+Question 1.9
+============
+
+-- 
+-- Structure de la table coureurs
+-- 
+
+CREATE TABLE etape (
+dossard integer,
+arrivee time
+)
+
+-- 
+-- Contenu de la table coureurs
+-- 
+
+INSERT INTO etape (dossard) values (10);
+INSERT INTO etape (arrivee) values (time '20:30:17');
+
+UPDATE etape 
+SET arrivee = '17:20:30'
+WHERE dossard = 10;
+
+UPDATE etape
+SET dossard = 1010
+WHERE arrivee = time'20:30:17';
+
+
+=============
+Question 1.10
+=============
+
+a- select etape.dossard, coureurs.nom, etape.arrivee from coureurs, etape where etape.dossard = coureurs.dossard order by arrivee asc
+
+b- select nom, etape.dossard, arrivee from coureurs, etape where arrivee < time'18:00:00' and etape.dossard = coureurs.dossard
+
+c- select etape.dossard, coureurs.nom, equipes.nom, equipes.couleur, etape.arrivee from etape,coureurs,equipes where etape.dossard = coureurs.dossard and coureurs.equipe = equipes.nom order by arrivee asc
+
+
+
+
+
+
+
+
+

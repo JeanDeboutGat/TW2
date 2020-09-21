@@ -1,0 +1,51 @@
+
+h1
+{
+    text-align: center;
+}
+h2
+{
+    text-align: center;
+}
+.nom
+{
+    color : brown ;
+}
+section h2
+{
+    text-align: right;
+    font-size : 10 pt;
+    color : white ;
+    background-color : darkred ;
+    width : 35% ;
+    border-radius : 5pt;
+
+}
+section
+{
+    border : solid 2pt darkgrey;
+	margin : 100 px;
+	padding : 3pt;
+	background-color : lightyellow;
+}
+
+table
+{
+    border-collapse: collapse;
+    height: 200px;
+    width: 200px;
+}
+
+td
+{
+    background-color: #A9A9A9;
+    border: 1px solid #000000;
+    color: #A9A9A9;
+    height: 16px;
+    width: 16px;
+}
+
+
+table.terrain td.noir{background : black}
+table.terrain td.blanc{background : white}
+
