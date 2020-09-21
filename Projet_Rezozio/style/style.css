@@ -1,0 +1,238 @@
+body{
+  background: #ddd;
+  font-family: sans-serif;
+}
+
+p{
+  margin:0;
+}
+
+.hide{
+  display: none;
+}
+
+.clearfix{
+  clear:both;
+}
+
+.clearfix_left{
+  clear: left;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.error{
+  background: red;
+  color: #fff
+}
+
+.success{
+  background: green;
+  color: #fff;
+}
+
+.button{
+  margin: 10px;
+}
+
+.content{
+  width: 900px;
+  height: auto;
+  margin: 0 auto;
+  background: #ffffff;
+  padding-bottom: 25px
+}
+
+.head{
+  background: #000;
+  color: #FFF;
+}
+
+.head p{
+  text-align: center;
+  padding: 7px;
+  font-size: 20px;
+}
+
+.main{
+  width: 600px;
+}
+
+.menu{
+  width: 250px;
+  padding: 0 10px;
+}
+
+p.seconnecter{
+  margin: 0;
+  text-align: center;
+  padding: 5px;
+  color: #ffffff;
+  background: #000;
+  margin-bottom: 10px;
+}
+
+
+#loginform{
+  height: auto;
+  margin: 15px 0;
+}
+
+#loginform input, #createUserForm input{
+  display: block;
+  margin-bottom: 10px;
+}
+
+#loginform span.pseudo{
+  font-weight: bold;
+}
+
+input[type=text], input[type=password]{
+  width: calc(100% - 15px);
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+textarea{
+  width: calc(100% - 15px);
+  min-width: calc(100% - 15px);
+  max-width: calc(100% - 15px);
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.formulairemessage{
+  padding: 5px;
+}
+
+.formulairemessage p{
+  color: #ffffff;
+  text-align: center;
+  background: #000;
+  padding: 5px 0;
+  margin-top: 0;
+}
+
+.formulairemessage textarea{
+  display: block;
+  border: 1px solid #000;
+  padding: 5px;
+  margin-top: 10px;
+  width: calc(100% - 10px);
+  min-width: calc(100% - 10px);
+  max-width: calc(100% - 10px);
+}
+
+.formulairemessage button{
+  display: block;
+  margin: 10px 0;
+  color: #fff;
+  background: #000;
+  border: 0;
+  padding: 3px;
+}
+
+/* messages css */
+
+#list_messages{
+  padding: 10px;
+}
+
+
+#list_messages .message{
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  border: 1px solid #dddd;
+  padding: 5px;
+}
+
+#list_messages .message .contents{
+  margin-bottom: 15px;
+}
+#list_messages .message .avatar{
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+#list_messages .message .avatar img{
+  border-radius: 50%;
+}
+
+#list_messages .message_and_pseudo{
+  float: left;
+}
+
+.message .date, .message .pseudologin{
+  font-size: 12px;
+  font-style: italic;
+  color: #848484;
+}
+
+.message .pseudologin span{
+  display: block;
+  margin-bottom: 5px;
+}
+
+.menu ul{
+  padding: 0;
+  list-style: none;
+}
+
+.menu ul li{
+  margin-bottom: 5px;
+}
+
+.page{
+  padding: 10px;
+}
+
+.page h3{
+  text-align: center;
+  padding: 2px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 10px;
+}
+
+table{
+  border: 1px solid #DDD;
+  width: 100%
+}
+
+table thead tr th{
+  color: #FFF;
+  background: #000;
+  padding: 5px 10px;
+  font-weight: normal;
+}
+
+table tbody tr{
+  margin-bottom: 2px;
+  background: #DDD;
+  text-align: center;
+}
+
+table tbody tr:nth-child(2n+1){
+  background: #ffffff;
+}
+
+.input{
+  margin-bottom: 10px;
+}
+
+.input label{
+  display: block;
+  text-transform: capitalize;
+  margin-bottom: 2px;
+}
+
+.input label::after{
+  content: ":";
+}
+
