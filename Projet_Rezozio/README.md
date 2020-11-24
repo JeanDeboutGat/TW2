@@ -7,7 +7,7 @@ Rézozio is a message publication website where a user signed  on it can publish
 consulted without any need of identification .
 
 ##Link to the project
-https://www.webtp.fil.univ-lille1.fr/~gatari/projet2
+https://www.webtp.fil.univ-lille1.fr/~gatari/projet2  (access to the university server required)
 
 ##Challenges during the project implementation
 In filtering messages, no help to user for autosearch from entered substring.
